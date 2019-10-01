@@ -5,7 +5,10 @@ app.set("view engine","ejs");
 app.set("views","./views");
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
-server.listen(process.env.PORT||3000);
+var port = process.env.PORT || 8000;
+server.listen(port, function() {
+    console.log("App is running on port " + port);
+});
 
 io.on("connection",function(socket){
   console.log("ketnoi :" + socket.id);
