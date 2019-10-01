@@ -7,18 +7,18 @@
     <script src = "https://congthien.herokuapp.com/socket.io/socket.io.js"></script>
     <script>
       var socket = io("https://congthien.herokuapp.com");
-      socket.on("Server-send-date",function(data){
+      socket.on("Server-send-data",function(data){
 $("#noidung").append(data + " ,");
 
       })
       $(document).ready(function(){
-        alert("Hello");
+
       });
 
     </script>
   </head>
   <body>
-    Heloo
+    Hello
     <h1 id ="noidung"></h1>
   </body>
 </html>

@@ -12,7 +12,7 @@ server.listen(port, function() {
 
 io.on("connection",function(socket){
   console.log("ketnoi :" + socket.id);
-  io.sockets.emit("Server-send-data", "ket noi")
+  io.sockets.emit("Server-send-data", "ket noi");
 
 })
 
