@@ -8,9 +8,7 @@ var io = require("socket.io")(server);
 var port = process.env.PORT || 8000;
 var esp8266 = io.of('/esp8266');
 var web = io.of('/web');
-var middleware = require('socketio-wildcard')();
-esp8266.use(middleware);
-web.use(middleware);
+
 server.listen(port, function() {
     console.log("App is running on port " + port);
 });
