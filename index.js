@@ -14,11 +14,12 @@ server.listen(port, function() {
 });
 
 
-web.on("connection",function(socket){
+esp8266.on("connection",function(socket){
   console.log("ketnoi :" + socket.id);
-  web.sockets.emit("Server-send-data", "ket noi : "+ socket.id);
-web.on("disconnect",function(){
-    web.sockets.emit("Server-send-data","ngat ket noi : "+socket.id);
+  web.emit("Server-send-data", "ket noi : "+ socket.id);
+socket.on("disconnect",function(){
+  console.log("ngatketnoi :" + socket.id);
+    socket.broadcast.emit("Server-send-data","ngat ket noi : "+socket.id);
   })
 
 })
