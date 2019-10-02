@@ -6,7 +6,7 @@
     <script src="jquery.js"></script>
     <script src = "https://congthien.herokuapp.com/socket.io/socket.io.js"></script>
     <script>
-      var socket = io("https://congthien.herokuapp.com");
+      var socket = io("https://congthien.herokuapp.com/web");
       socket.on("Server-send-data",function(data){
 $("#noidung").append(data + " ,");
 
