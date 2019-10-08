@@ -25,14 +25,6 @@ function ParseJson(jsondata) {
 //database
 
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/admin?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
 
 
 //Bắt các sự kiện khi esp8266 kết nối
