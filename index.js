@@ -25,10 +25,10 @@ function ParseJson(jsondata) {
 //database
 
 
-var mogoose = require('mogoose');
-mogoose.connect("mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/admin?retryWrites=true&w=majority")
-mogoose.Promise = global.Promise;
-var db= mogoose.connection;
+var mongoose = require('mongoose');
+mongoose.connect("mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/admin?retryWrites=true&w=majority")
+mongoose.Promise = global.Promise;
+var db= mongoose.connection;
 db.on('erro',console.error.bind(console,' mongodb error :'));
 
 //Bắt các sự kiện khi esp8266 kết nối
