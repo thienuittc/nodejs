@@ -24,8 +24,9 @@ function ParseJson(jsondata) {
 }
 //database
 
+
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://dbThien:<toibiettai113>@thien-efwuw.mongodb.net/admin?retryWrites=true&w=majority";
+const uri = "mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/admin?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
