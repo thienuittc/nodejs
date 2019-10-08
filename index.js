@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 app.use(express.static("./public"));
-app.use(express.static("./socket.io-client")) ;				// Có thể truy cập các file trong node_modules/socket.io-client từ xa
+app.use(express.static("./socket.io-client"));				// Có thể truy cập các file trong node_modules/socket.io-client từ xa
 app.set("view engine","ejs");
 app.set("views","./views");
 var server = require("http").Server(app);
@@ -22,6 +22,16 @@ function ParseJson(jsondata) {
         return null;
     }
 }
+//database
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://dbThien:<toibiettai113>@thien-efwuw.mongodb.net/admin?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 
 //Bắt các sự kiện khi esp8266 kết nối
@@ -45,9 +55,7 @@ esp8266_nsp.on('connection', function(socket) {
 //Bắt các sự kiện khi webapp kết nối
 
 webapp_nsp.on('connection', function(socket) {
-
 	console.log('webapp connected')
-
 	//Khi webapp socket bị mất kết nối
 	socket.on('disconnect', function() {
 		console.log("Disconnect socket webapp")
