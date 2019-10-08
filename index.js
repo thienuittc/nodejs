@@ -25,7 +25,12 @@ function ParseJson(jsondata) {
 //database
 
 
-
+// const mongoose = require('mongoose');
+// mongoose.connect("mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/admin?retryWrites=true&w=majority"
+//   ,{
+//     useMongoClient : true
+//   }
+// )
 
 //Bắt các sự kiện khi esp8266 kết nối
 esp8266_nsp.on('connection', function(socket) {
