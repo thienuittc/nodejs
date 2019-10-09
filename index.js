@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
   age : Number
 })
 
-const user = mongoose.model('user',userSchema);
+//const user = mongoose.model('user',userSchema);
 
 // user.create({
 //   name : "thien",
