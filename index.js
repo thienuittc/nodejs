@@ -31,21 +31,22 @@ mongoose.Promise = global.Promise;
 var db= mongoose.connection;
 db.on('erro',console.error.bind(console,' mongodb error :'));-
 
-// var userSchema = new mongoose.Schema({
-//   name : String,
-//   age : Number
-// })
-//
-// var user = mongoose.model('user',userSchema);
-//
-// user.create({
-//   name : "thien",
-//   age : 15
-// })
+var userSchema = new Schema({
+  name : String,
+  age : Number
+})
+
+var user = mongoose.model('user',userSchema);
+
+
 
 //Bắt các sự kiện khi esp8266 kết nối
 esp8266_nsp.on('connection', function(socket) {
 	console.log('esp8266 connected');
+  user.create({
+    name : "thien",
+    age : 15
+  })
   webapp_nsp.emit("Server-send-data",socket.id);
 
 	socket.on('disconnect', function() {
