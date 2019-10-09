@@ -29,7 +29,7 @@ var mongoose = require('mongoose');
 mongoose.connect("mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/admin?retryWrites=true&w=majority")
 mongoose.Promise = global.Promise;
 var db= mongoose.connection;
-db.on('erro',console.error.bind(console,' mongodb error :'));-
+db.on('erro',console.error.bind(console,' mongodb error :'));
 
 var userSchema = new Schema({
   name : String,
