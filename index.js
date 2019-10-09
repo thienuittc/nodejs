@@ -43,7 +43,7 @@ var user = mongoose.model('user',userSchema);
 //Bắt các sự kiện khi esp8266 kết nối
 esp8266_nsp.on('connection', function(socket) {
 	console.log('esp8266 connected');
-  user.create({
+  var mes = new user({
     name : "thien",
     age : 15
   })
