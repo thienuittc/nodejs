@@ -30,9 +30,6 @@ mongoose.connect("mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/ad
 //mongoose.Promise = global.Promise;
  var db= mongoose.connection;
 db.on('erro',console.error.bind(console,' mongodb error :'));
-dc.once('open',function(){
-  console.log("DB connected");
-})
 
 var userSchema = new Schema({
   name: String,
