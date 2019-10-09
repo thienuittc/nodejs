@@ -34,7 +34,7 @@ dc.once('open',function(){
   console.log("DB connected");
 })
 
-var userSchema = new mongoose.Schema({
+var userSchema = new Schema({
   name: String,
   age: Number
 });
