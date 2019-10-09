@@ -25,28 +25,23 @@ function ParseJson(jsondata) {
 //database
 
 
-var mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/admin?retryWrites=true&w=majority")
-//mongoose.Promise = global.Promise;
- var db= mongoose.connection;
- db.on('erro',console.error.bind(console,' mongodb error :'));
 
-var userSchema = new mongoose.Schema({
-  name: String,
-  age: Number
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
 });
 
-var user = mongoose.model('user',userSchema);
 
 
 
 //Bắt các sự kiện khi esp8266 kết nối
 esp8266_nsp.on('connection', function(socket) {
 	console.log('esp8266 connected');
-  var mes = new user({
-    name : "thien",
-    age : 15
-  })
+
   webapp_nsp.emit("Server-send-data",socket.id);
 
 	socket.on('disconnect', function() {
