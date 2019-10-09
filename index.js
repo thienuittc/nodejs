@@ -34,7 +34,7 @@ db.on('erro',console.error.bind(console,' mongodb error :'));-
 var userSchema = new Schema({
   name : String,
   age : Number
-})
+});
 
 var user = mongoose.model('user',userSchema);
 
