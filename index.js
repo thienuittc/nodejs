@@ -38,10 +38,10 @@ const userSchema = new mongoose.Schema({
 
 const user = mongoose.model('user',userSchema);
 
-user.create({
-  name : "thien",
-  age : 15
-})
+// user.create({
+//   name : "thien",
+//   age : 15
+// })
 
 //Bắt các sự kiện khi esp8266 kết nối
 esp8266_nsp.on('connection', function(socket) {
