@@ -33,9 +33,9 @@ mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/te
     useUnifiedTopology: true
 }).then(()=>console.log('DB connected!'));
 
-var UserSchema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
- var user  = new Schema({
+ var UserSchema  = new Schema({
    name : String,
    age  : Number
  });
