@@ -24,12 +24,12 @@ function ParseJson(jsondata) {
 }
 //database
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority',{
-    useNewUrlParser:true,
-    useCreateIndex:true,
-    useUnifiedTopology: true
-}).then(()=>console.log('DB connected!'));
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority',{
+//     useNewUrlParser:true,
+//     useCreateIndex:true,
+//     useUnifiedTopology: true
+// }).then(()=>console.log('DB connected!'));
 
 // var Schema = mongoose.Schema;
 //
