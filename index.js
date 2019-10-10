@@ -24,9 +24,7 @@ function ParseJson(jsondata) {
 }
 //database
 
-
-
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority',{
     useNewUrlParser:true,
     useCreateIndex:true,
