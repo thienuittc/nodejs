@@ -31,14 +31,14 @@ mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/te
     useUnifiedTopology: true
 }).then(()=>console.log('DB connected!'));
 
-var Schema = mongoose.Schema;
-
- var UserSchema  = new Schema({
-   name : String,
-   age  : Number
- });
-
-var User = mongoose.model('Blog', UserSchema);
+// var Schema = mongoose.Schema;
+//
+//  var UserSchema  = new Schema({
+//    name : String,
+//    age  : Number
+//  });
+//
+// var User = mongoose.model('Blog', UserSchema);
 
 
 //Bắt các sự kiện khi esp8266 kết nối
