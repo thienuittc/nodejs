@@ -66,10 +66,10 @@ webapp_nsp.on('connection', function(socket) {
 	console.log('webapp connected')
 	//Khi webapp socket bị mất kết nối
 	socket.on('disconnect', function() {
-    User.create({
-      name:'thien1',
-      age :15
-    });
+    // User.create({
+    //   name:'thien1',
+    //   age :15
+    // });
 		console.log("Disconnect socket webapp")
 	})
 
