@@ -26,16 +26,21 @@ function ParseJson(jsondata) {
 
 
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Caulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+const mongoose = require('mongoose')
+mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority',{
+    useNewUrlParser:true,
+    useCreateIndex:true,
+    useUnifiedTopology: true
+}).then(()=>console.log('DB connected!'));
 
+var UserSchema = mongoose.Schema;
 
+ var user  = new Schema({
+   name : String,
+   age  : Number
+ });
+
+var User = mongoose.model('Blog', UserSchema);
 
 
 //Bắt các sự kiện khi esp8266 kết nối
@@ -63,6 +68,10 @@ webapp_nsp.on('connection', function(socket) {
 	console.log('webapp connected')
 	//Khi webapp socket bị mất kết nối
 	socket.on('disconnect', function() {
+    User.create({
+      name:'thien',
+      age :15
+    });
 		console.log("Disconnect socket webapp")
 	})
 
