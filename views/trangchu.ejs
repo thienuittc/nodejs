@@ -8,7 +8,7 @@
     <script>
       var socket = io("http://congthien.herokuapp.com/webapp");
       socket.on("Server-send-data",function(data){
-$("#noidung").append(data + " ,");
+$("#noidung").append(data["name"] + " , " + data["age"]);
 
       })
       $(document).ready(function(){
