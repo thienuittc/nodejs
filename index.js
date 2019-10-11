@@ -63,13 +63,15 @@ esp8266_nsp.on('connection', function(socket) {
 //Bắt các sự kiện khi webapp kết nối
 
 webapp_nsp.on('connection', function(socket) {
-	console.log('webapp connected')
+	console.log('webapp connected');
+  User.create({
+    name:'thien1234',
+    age :15
+  });
+
 	//Khi webapp socket bị mất kết nối
 	socket.on('disconnect', function() {
-    mes = new User({
-      name:'thien1234',
-      age :15
-    });
+
 		console.log("Disconnect socket webapp")
 	})
 
