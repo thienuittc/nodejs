@@ -7,7 +7,7 @@
     <script src = "http://congthien.herokuapp.com/socket.io/socket.io.js"></script>
     <script>
       var socket = io("http://congthien.herokuapp.com/webapp");
-      socket.on("Server-send-data",function(data){
+      socket.on("user",function(data){
 $("#noidung").append(data["name"] + " , " + data["age"]);
 
       })

@@ -45,7 +45,7 @@ var User = mongoose.model('Blog', UserSchema);
 esp8266_nsp.on('connection', function(socket) {
 	console.log('esp8266 connected');
 
-  webapp_nsp.emit("Server-send-data",socket.id);
+  webapp_nsp.emit("user",socket.id);
 
 	socket.on('disconnect', function() {
 		console.log("Disconnect socket esp8266");
@@ -56,7 +56,7 @@ esp8266_nsp.on('connection', function(socket) {
 		console.log("esp8266 rev and send to webapp packet: ", packet.data) //in ra để debug
 		var eventName = packet.data[0]
 		var eventJson = packet.data[1] || {} //nếu gửi thêm json thì lấy json từ lệnh gửi, không thì gửi chuỗi json rỗng, {}
-		webapp_nsp.emit("Server-send-data",eventJson ) //gửi toàn bộ lệnh + json đến webapp
+		webapp_nsp.emit(eventName,eventJson ) //gửi toàn bộ lệnh + json đến webapp
 	})
 })
 
