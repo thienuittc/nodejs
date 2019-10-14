@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 app.use(express.static("./public"));
+app.use(express.static("./css"));
 app.use(express.static("./socket.io-client"));				// Có thể truy cập các file trong node_modules/socket.io-client từ xa
 app.set("view engine","ejs");
 app.set("views","./views");
