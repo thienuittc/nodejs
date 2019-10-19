@@ -46,7 +46,7 @@ var User = mongoose.model('Blog', UserSchema);
 esp8266_nsp.on('connection', function(socket) {
 	console.log('esp8266 connected');
 
-//  webapp_nsp.emit("Server-send-data",socket.id);
+//   webapp_nsp.emit("Server-send-data",socket.id);
 
 	socket.on('disconnect', function() {
 		console.log("Disconnect socket esp8266");
