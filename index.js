@@ -25,28 +25,28 @@ function ParseJson(jsondata) {
 }
 //database
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority',{
-    useNewUrlParser:true,
-    useCreateIndex:true,
-    useUnifiedTopology: true
-}).then(()=>console.log('DB connected!'));
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb+srv://dbCaulong:31011997@cluster0-y6pqx.mongodb.net/test?retryWrites=true&w=majority',{
+//     useNewUrlParser:true,
+//     useCreateIndex:true,
+//     useUnifiedTopology: true
+// }).then(()=>console.log('DB connected!'));
 
-var Schema = mongoose.Schema;
+// var Schema = mongoose.Schema;
 
- var UserSchema  = new Schema({
-   name : String,
-   age  : Number
- });
+//  var UserSchema  = new Schema({
+//    name : String,
+//    age  : Number
+//  });
 
-var User = mongoose.model('Blog', UserSchema);
+// var User = mongoose.model('Blog', UserSchema);
 
 
 //Bắt các sự kiện khi esp8266 kết nối
 esp8266_nsp.on('connection', function(socket) {
 	console.log('esp8266 connected');
 
-//  webapp_nsp.emit("Server-send-data",socket.id);
+  webapp_nsp.emit("Server-send-data",socket.id);
 
 	socket.on('disconnect', function() {
 		console.log("Disconnect socket esp8266");
@@ -65,10 +65,10 @@ esp8266_nsp.on('connection', function(socket) {
 
 webapp_nsp.on('connection', function(socket) {
 	console.log('webapp connected');
-  User.create({
-    name:'thien1234',
-    age :15
-  });
+//   User.create({
+//     name:'thien1234',
+//     age :15
+//   });
 
 	//Khi webapp socket bị mất kết nối
 	socket.on('disconnect', function() {
