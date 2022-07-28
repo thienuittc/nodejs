@@ -5,7 +5,7 @@ app.use(express.static("./css"));
 app.use(express.static("./socket.io-client"));				// Có thể truy cập các file trong node_modules/socket.io-client từ xa
 app.set("view engine","ejs");
 app.set("views","./views");
-var server = require("https").Server(app);
+var server = require("http").Server(app);
 var io = require("socket.io")(server);
 var port = process.env.PORT || 3484;
 var webapp_nsp = io.of('/webapp');				//namespace của webapp
