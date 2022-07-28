@@ -41,7 +41,27 @@ function ParseJson(jsondata) {
 
 // var User = mongoose.model('Blog', UserSchema);
 
+io.on('connection', function (client) {
+  console.log('Connected...', client.id);
+  io.emit('message', client.id);
 
+//listens for new messages coming in
+  client.on('message', function name(data) {
+    console.log(data);
+    socketIO.emit('message', data);
+  })
+
+//listens when a user is disconnected from the server
+  client.on('disconnect', function () {
+    console.log('Disconnected...', client.id);
+  })
+
+//listens when there's an error detected and logs the error on the console
+  client.on('error', function (err) {
+    console.log('Error detected', client.id);
+    console.log(err);
+  })
+})
 //Bắt các sự kiện khi esp8266 kết nối
 esp8266_nsp.on('connection', function(socket) {
 	console.log('esp8266 connected');
