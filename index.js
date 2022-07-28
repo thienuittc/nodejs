@@ -48,7 +48,7 @@ io.on('connection', function (client) {
 //listens for new messages coming in
   client.on('message', function name(data) {
     console.log(data);
-    socketIO.emit('message', data);
+    io.emit('message', data);
   })
 
 //listens when a user is disconnected from the server
