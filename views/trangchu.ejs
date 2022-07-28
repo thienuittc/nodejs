@@ -8,10 +8,10 @@
   <meta charset="utf-8">
   <title>Hello</title>
   <script src="jquery.js"></script>
-  <script src="http://congthien.herokuapp.com/socket.io/socket.io.js"></script>
+  <script src="https://thientran-chatbox.herokuapp.com/socket.io/socket.io.js"></script>
   <!-- <script src = "http://congthien.herokuapp.com/socket.io/socket.io.js"></script> -->
   <script>
-    var socket = io("http://congthien.herokuapp.com/webapp");
+    var socket = io("https://thientran-chatbox.herokuapp.com/webapp");
 
     socket.on("Server-send-data", function(data) {
       $("#noidung").append(data);
