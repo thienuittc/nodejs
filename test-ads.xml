@@ -6,8 +6,13 @@
 <Description>Dacast Custom VAST Ad</Description>
 <Creatives>
 <Creative>
-<Linear>
+<Linear skipoffset="00:00:05">
 <Duration>00:00:30</Duration>
+  <VideoClicks>
+<ClickThrough>
+<![CDATA[ https://6686vn68.com ]]>
+</ClickThrough>
+</VideoClicks>
 <MediaFiles>
 <MediaFile delivery="progressive" type="video/mp4" scalable="true" maintainAspectRatio="true"> https://api.megalive.vn/uploads/ads/ads_video.mp4 </MediaFile>
 </MediaFiles>
