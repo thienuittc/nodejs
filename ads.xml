@@ -14,7 +14,7 @@
 </ClickThrough>
 </VideoClicks>
 <MediaFiles>
-<MediaFile delivery="progressive" type="video/mp4" scalable="true" maintainAspectRatio="true"> https://api.megalive.vn/uploads/ads/ads_video.mp4 </MediaFile>
+<MediaFile delivery="progressive" type="video/mp4" scalable="true" maintainAspectRatio="true"> <![CDATA[ https://api.megalive.vn/uploads/ads/ads_video.mp4 ]]> </MediaFile>
 </MediaFiles>
 </Linear>
 </Creative>
