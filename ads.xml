@@ -1,24 +1,23 @@
-<VAST version="2.0">
-<Ad>
-<InLine>
-<AdSystem>Dacast</AdSystem>
-<AdTitle>Dacast Custom VAST Ad</AdTitle>
-<Description>Dacast Custom VAST Ad</Description>
-<Creatives>
-<Creative>
-<Linear skipoffset="00:00:05">
-<Duration>00:00:00</Duration>
-<VideoClicks>
-<ClickThrough>
-<![CDATA[ https://6689vn86.vn ]]>
-</ClickThrough>
-</VideoClicks>
-<MediaFiles>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+    <Ad>
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>External NCA1C1L1 Linear Inline</AdTitle>
+            <Creatives>
+                <Creative id="57859154776" sequence="1">
+                    <Linear skipoffset="00:00:05">
+                        <Duration>00:00:30</Duration>
+                        <VideoClicks>
+                            <ClickThrough id="GDFP">
+                                <![CDATA[ https://6689vn86.vn ]]>
+                            </ClickThrough>
+                        </VideoClicks>
+                        <MediaFiles>
 <MediaFile delivery="progressive" type="video/mp4" scalable="true" maintainAspectRatio="true"> https://dacastdd.s.llnwi.net/universe-vod-storage/attachment/dc6212c4-6e0f-4ef1-9eb1-9ac6eda21cf9/1f4418b1-c51f-4452-b685-199fdc0c1de6/83e02445-a839-bc0d-5ae8-99ea061d16aa_rendition.mp4?p=185&s=1686750251&e=1686836651&X-Dacast-Vod=1f4418b1-c51f-4452-b685-199fdc0c1de6&h=51bfa2070f1d0c411db0027e36428f1a </MediaFile>
-</MediaFiles>
-</Linear>
-</Creative>
-</Creatives>
-</InLine>
-</Ad>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
 </VAST>
