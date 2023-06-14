@@ -6,8 +6,13 @@
 <Description>Dacast Custom VAST Ad</Description>
 <Creatives>
 <Creative>
-<Linear >
-<Duration>00:00:00</Duration>
+           <Linear skipoffset="00:00:05">
+                        <Duration>00:00:30</Duration>
+                        <VideoClicks>
+                            <ClickThrough id="GDFP">
+                                <![CDATA[ https://6689vn86.vn ]]>
+                            </ClickThrough>
+                        </VideoClicks>
 <MediaFiles>
 <MediaFile delivery="progressive" type="video/mp4" scalable="true" maintainAspectRatio="true"> <![CDATA[ https://dacastdd.s.llnwi.net/universe-vod-storage/attachment/dc6212c4-6e0f-4ef1-9eb1-9ac6eda21cf9/1f4418b1-c51f-4452-b685-199fdc0c1de6/83e02445-a839-bc0d-5ae8-99ea061d16aa_rendition.mp4?p=185&s=1686751522&e=1686837922&X-Dacast-Vod=1f4418b1-c51f-4452-b685-199fdc0c1de6&h=d138d99ea93d6434ac2166f4f13688a1 ]]> </MediaFile>
 </MediaFiles>
